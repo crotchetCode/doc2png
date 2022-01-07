@@ -1,0 +1,31 @@
+{
+  "name": "@doc2png/shared",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "scripty",
+    "clean": "rimraf dist *.tsbuildinfo",
+    "build": "scripty"
+  },
+  "scripty": {
+    "path": "../../scripts/packages"
+  },
+  "dependencies": {
+    "fs-extra": "10.0.0",
+    "glob": "7.2.0",
+    "globby": "12.0.2",
+    "is-valid-path": "0.1.1",
+    "urllib": "2.37.4",
+    "write": "2.0.0"
+  },
+  "devDependencies": {
+    "@types/is-valid-path": "0.1.0"
+  }
+}

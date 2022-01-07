@@ -1,0 +1,57 @@
+{
+  "name": "doc2png",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "description": "support doc transport to png",
+  "scripts": {
+    "postinstall": "husky install",
+    "build": "scripty",
+    "lint": "scripty",
+    "pre-commit": "lint-staged",
+    "clean": "scripty",
+    "prepublish": "npm run build",
+    "publish": "lerna publish",
+    "commit": "cz"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/config-lerna-scopes": "^11.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
+    "commitlint": "^11.0.0",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "^7.11.0",
+    "husky": "7.0.4",
+    "lerna": "^3.22.1",
+    "lerna-changelog": "^1.0.1",
+    "lint-staged": "10.5.3",
+    "prettier": "2.2.1",
+    "rimraf": "^3.0.2",
+    "scripty": "^2.0.0",
+    "typescript": "4.1.5"
+  },
+  "scripty": {
+    "path": "./scripts/workspace"
+  },
+  "lint-staged": {
+    "packages/**/*.{ts,tsx,js,jsx,json,css,scss,less,stylus}": [
+      "prettier --write"
+    ]
+  },
+  "volta": {
+    "node": "14.17.3",
+    "yarn": "1.22.10"
+  },
+  "dependencies": {
+    "commitizen": "4.2.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
