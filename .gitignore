@@ -18,3 +18,4 @@ yarn.lock
 !.husky
 test
 images
+!build.sh
